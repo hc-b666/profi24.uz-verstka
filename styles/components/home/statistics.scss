@@ -6,6 +6,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (min-width: 769px) and (max-width: 1440px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .statistics-card {
       padding: 10px;
       width: 100%;

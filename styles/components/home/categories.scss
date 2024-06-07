@@ -9,6 +9,10 @@
 
     & > h2 {
       @include typoH2($black);
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
     }
 
     & > button {
@@ -21,6 +25,14 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @media (min-width: 769px) and (max-width: 1440px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       .category-card {
         padding: 30px;
@@ -52,6 +64,22 @@
           z-index: 100;
         }
 
+        &:hover {
+          background-color: $primary-500;
+
+          & > img {
+            opacity: 0;
+          }
+
+          & > h4 {
+            color: $white;
+          }
+
+          .category-card-description {
+            opacity: 1;
+          }
+        }
+
         .category-card-description {
           height: 100%;
           overflow-y: auto;
@@ -78,23 +106,7 @@
             font-weight: 500;
             line-height: 22px;
           }
-        }
-
-        &:hover {
-          background-color: $primary-500;
-
-          & > img {
-            opacity: 0;
-          }
-
-          & > h4 {
-            color: $white;
-          }
-
-          .category-card-description {
-            opacity: 1;
-          }
-        }
+        }    
       }
 
       .create-card {

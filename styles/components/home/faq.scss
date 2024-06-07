@@ -4,10 +4,26 @@
   .container {
     gap: 38px;
 
+    h2 {
+      @include typoH2($typo-header-color);
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+
     .faq-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       & > div {
         gap: 24px;

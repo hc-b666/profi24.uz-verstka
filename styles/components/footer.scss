@@ -3,13 +3,23 @@
   background-color: $gray-50;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
+  position: relative;
 
   .container {
     padding-top: 100px;
-  
+
     .footer-top {
+      flex-wrap: wrap;
       gap: 100px;
       padding-bottom: 64px;
+
+      @media (max-width: 768px) {
+        gap: 30px;
+      }
+
+      @media (min-width: 769px) and (max-width: 1440px) {
+        gap: 50px;
+      }
 
       .footer-top-logos {
         gap: 40px;
@@ -17,20 +27,46 @@
         & > div {
           gap: 20px;
         }
+
+        @media (max-width: 768px) {
+          flex-direction: row;
+          align-items: center;
+        }
       }
 
       .footer-top-links {
-        gap: 20px;
+        gap: 100px;
 
-        a {
-          color: $typo-header-color;
-          font-size: 17px;
-          font-weight: 500;
-          line-height: 22px;
-        
-          &:hover {
-            color: $primary-500;
-            text-decoration: underline;
+        @media (max-width: 524px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        @media (max-width: 768px) {
+          gap: 30px;
+        }
+
+        @media (min-width: 769px) and (max-width: 1440px) {
+          gap: 50px;
+        }
+
+        & > div {
+          gap: 20px;
+
+          & > a {
+            color: $typo-header-color;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 22px;
+
+            &:hover {
+              color: $primary-500;
+              text-decoration: underline;
+            }
+
+            @media (max-width: 524px) {
+              text-align: center;
+            }
           }
         }
       }
@@ -69,7 +105,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all .4s;
+            transition: all 0.4s;
 
             &:hover {
               background-color: $primary-500;
@@ -81,6 +117,10 @@
 
     .footer-bottom {
       padding: 25px 0;
+
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
 
       p {
         @include typoPLead($typo-header-color);
@@ -94,10 +134,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: .4s;
+        transition: 0.4s;
 
         &:hover {
           background-color: $primary-500;
+        }
+
+        @media (max-width: 768px) {
+          background-color: $primary-500;
+          position: absolute;
+          top: -25px;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }
