@@ -1,0 +1,105 @@
+.footer {
+  width: 100%;
+  background-color: $gray-50;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+
+  .container {
+    padding-top: 100px;
+  
+    .footer-top {
+      gap: 100px;
+      padding-bottom: 64px;
+
+      .footer-top-logos {
+        gap: 40px;
+
+        & > div {
+          gap: 20px;
+        }
+      }
+
+      .footer-top-links {
+        gap: 20px;
+
+        a {
+          color: $typo-header-color;
+          font-size: 17px;
+          font-weight: 500;
+          line-height: 22px;
+        
+          &:hover {
+            color: $primary-500;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .footer-top-icons {
+        gap: 32px;
+
+        .footer-top-bank-links {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 14px;
+
+          .bank-card {
+            width: 80px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+        }
+
+        .footer-top-social-links {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+
+          .social-card {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all .4s;
+
+            &:hover {
+              background-color: $primary-500;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      padding: 25px 0;
+
+      p {
+        @include typoPLead($typo-header-color);
+      }
+
+      button {
+        width: 50px;
+        height: 50px;
+        background-color: $white;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .4s;
+
+        &:hover {
+          background-color: $primary-500;
+        }
+      }
+    }
+  }
+}
