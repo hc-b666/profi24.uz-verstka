@@ -1,0 +1,22 @@
+@mixin buttonLG($background-color, $color, $padding) {
+  color: $color;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+  padding: $padding;
+  border-radius: 100px;
+  background-color: $background-color;
+  transition: background-color 0.4s ease;
+}
+
+@mixin buttonDefault($background-color, $color, $padding, $radius) {
+  color: $color;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  padding: $padding;
+  border-radius: $radius;
+  background-color: $background-color;
+  transition: all 0.4s ease;
+}

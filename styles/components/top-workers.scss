@@ -1,0 +1,144 @@
+.top-workers-section {
+  width: 100%;
+
+  .container {
+    gap: 38px;
+
+    h2 {
+      @include typoH2($black);
+    }
+
+    .top-workers-container {
+      width: 100%;
+      padding: 10px 0;
+      display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+      grid-auto-flow: column;
+      grid-auto-columns: 30%;
+      overflow-x: auto;
+      gap: 24px;
+
+      .top-worker-card {
+        padding: 30px;
+        border-radius: 30px;
+        width: 100%;
+        box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.1);
+        gap: 24px;
+
+        .top-worker-header {
+          gap: 20px;
+
+          .top-worker-header-content {
+            gap: 14px;
+
+            h5 {
+              @include typoH5($typo-header-color);
+            }
+
+            .top-worker-header-content-rating {
+              gap: 6px;
+
+              p {
+                @include typoP($typo-header-color);
+              }
+            }
+
+            .top-worker-header-content-info {
+              gap: 12px;
+
+              p {
+                @include typoP($typo-header-color);
+                padding: 8px 16px;
+                border-radius: 100px;
+                background-color: $gray-50;
+                gap: 6px;
+              }
+            }
+          }
+        }
+
+        .top-worker-center {
+          gap: 20px;
+
+          & > div {
+            gap: 8px;
+
+            p {
+              @include typoP($typo-muted-text);
+            }
+          }
+
+          & > div > div {
+            width: 32px;
+            height: 32px;
+            padding: 4px;
+            border-radius: 100px;
+            background-color: $primary-500;
+          }
+        }
+
+        .top-worker-bottom {
+          gap: 24px;
+
+          .top-worker-services {
+            div {
+              p {
+                @include typoP($typo-header-color);
+              }
+
+              p:nth-of-type(2) {
+                @include typoP($typo-header-color);
+                font-weight: 600;
+              }
+
+              & > div {
+                flex-grow: 1;
+                border-bottom: 1px dotted rgba(208, 213, 221, 1);
+                height: 1px;
+                align-self: flex-end;
+              }
+            }
+          }
+
+          .top-worker-contacts {
+            & > button {
+              @include buttonDefault($primary-500, $white, 12px 24px, 100px);
+
+              &:hover {
+                background-color: $secondary-500;
+              }
+            }
+
+            div {
+              gap: 20px;
+
+              button {
+                width: 36px;
+                height: 36px;
+                padding: 6px;
+                border-radius: 100%;
+                background-color: $white;
+                box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.1);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & > div {
+      gap: 20px;
+
+      & > button {
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        background-color: $white;
+        box-shadow: 0px 2px 4px 0px rgba(165, 163, 174, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
