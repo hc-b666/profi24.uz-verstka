@@ -10,7 +10,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
 
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-lg) {
       padding: 30px;
       grid-template-columns: 1fr;
       height: auto;
@@ -87,7 +87,7 @@
       .professionals-content-2 {
         animation: scroll-up 20s linear infinite;
 
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-md) {
           display: none;
         }
       }

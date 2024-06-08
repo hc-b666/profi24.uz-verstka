@@ -13,7 +13,7 @@
         left: 14px;
         transform: translateY(-50%);
 
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-md) {
           display: none;
         }
       }
@@ -30,7 +30,7 @@
           line-height: 28px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-md) {
           padding: 24px 30px;
         }
       }
@@ -42,7 +42,7 @@
         right: 14px;
         transform: translateY(-50%);
 
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-md) {
           display: none;
         }
       }
@@ -58,7 +58,7 @@
         right: 14px;
         transform: translateY(-50%);
 
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-md) {
           display: inline-block;
         }
       }

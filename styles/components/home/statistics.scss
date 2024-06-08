@@ -6,11 +6,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       grid-template-columns: repeat(1, 1fr);
     }
 
-    @media (min-width: 769px) and (max-width: 1440px) {
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xxl) {
       grid-template-columns: repeat(2, 1fr);
     }
 

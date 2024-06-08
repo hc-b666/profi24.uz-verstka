@@ -1,0 +1,76 @@
+.auth-phone-main {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  .container {
+    gap: 40px;
+
+    @media (max-width: $breakpoint-xl) {
+      align-items: center;
+    }
+
+    .go-back {
+      gap: 15px;
+
+      button {
+        width: 25px;
+        height: 25px;
+        border-radius: 100px;
+        background-color: $gray-300;
+        box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.05);
+        transition: all 0.4s;
+      }
+
+      h6 {
+        @include typoH6($typo-muted-text);
+      }
+    }
+
+    h3 {
+      @include typoH3($typo-header-color);
+    }
+
+    form {
+      width: 380px;
+      gap: 20px;
+
+      // Input Wrapper
+      & > div {
+        width: 100%;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 26px;
+          transform: translateY(-50%);
+        }
+
+        input {
+          padding: 24px 64px;
+          width: 100%;
+          border: 1px solid $gray-300;
+          border-radius: 10px;
+
+          &::placeholder {
+            color: $typo-header-color;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 22px;
+          }
+        }
+      }
+
+      & > button {
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 24px;
+        width: 100%;
+        border-radius: 16px;
+        background-color: $primary-500;
+      }
+    }
+  }
+}

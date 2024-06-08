@@ -8,14 +8,14 @@
     padding-inline: 100px;
     gap: 50px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: $breakpoint-xl) {
       padding-top: 48px;
       padding-inline: 48px;
       flex-direction: column;
       gap: 20px;
     }
 
-    @media (max-width: 1440px) {
+    @media (max-width: $breakpoint-xxl) {
       gap: 30px;
     }
 
@@ -33,7 +33,7 @@
           @include typoPLead($typo-muted-text);
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: $breakpoint-xl) {
           h2,
           p {
             text-align: center;
@@ -44,7 +44,7 @@
       .experts-content-image {
         gap: 20px;
       
-        @media (max-width: 1200px) {
+        @media (max-width: $breakpoint-xl) {
           align-self: center;
         }
       }
@@ -55,7 +55,7 @@
         padding: 32px 32px 0 32px;
       }
 
-      @media (max-width: 1200px) {
+      @media (max-width: $breakpoint-xl) {
         img {
           padding: 0;
           width: 320px;

@@ -1,0 +1,49 @@
+// Background Image
+.bg-box-top-right {
+  width: 25%;
+  height: 35%;
+  background-color: $primary-500;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+
+  @media (max-width: $breakpoint-xl) {
+    display: none;
+  }
+}
+
+.bg-box-bottom-right {
+  width: 50%;
+  height: 65%;
+  border-top-left-radius: 100px;
+  background-color: $primary-500;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+
+  @media (max-width: $breakpoint-xl) {
+    display: none;
+  }
+}
+
+.auth-bg-image {
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @media (max-width: $breakpoint-xl) {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    height: 90%;
+    right: 5%;
+  }
+
+  @media (min-width: 2240px) {
+    right: 10%;
+  }
+}

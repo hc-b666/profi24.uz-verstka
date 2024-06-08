@@ -7,7 +7,7 @@
     & > h2 {
       @include typoH2($black);
 
-      @media (max-width: 768px) {
+      @media (max-width: $breakpoint-md) {
         text-align: center;
       }
     }
@@ -18,7 +18,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
 
-      @media (max-width: 768px) {
+      @media (max-width: $breakpoint-md) {
         padding: 20px;
         display: flex;
         overflow-x: auto;
@@ -30,7 +30,7 @@
         }
       }
 
-      @media (min-width: 769px) and (max-width: 1440px) {
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xxl) {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -42,7 +42,7 @@
         transition: all 0.4s;
         cursor: pointer;
 
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-md) {
           min-width: 350px;
         }
 
@@ -83,8 +83,7 @@
     }
 
     h5 {
-      @include typoH5($primary-500);
-      text-align: center;
+      @include typoH5($primary-500, center);
       padding-right: 4px;
 
       & > span {
