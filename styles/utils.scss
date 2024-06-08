@@ -46,6 +46,11 @@ $flexbox: (
   "no-wrap": (flex-wrap: nowrap),
 );
 
+$colors: (
+  "success-500": (color: $success-500),
+  "danger-500": (color: $danger-500),
+);
+
 // Function to generate utilities
 @mixin generate-utilities($map) {
   @each $class, $styles in $map {
@@ -59,3 +64,4 @@ $flexbox: (
 
 // Generate utilities
 @include generate-utilities($flexbox);
+@include generate-utilities($colors);
