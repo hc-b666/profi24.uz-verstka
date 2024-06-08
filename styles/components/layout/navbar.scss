@@ -1,0 +1,93 @@
+.navbar {
+  padding: 16px 0;
+  width: 100%;
+  box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.1);
+
+  @media (max-width: 992px) {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .mobile-navbar-left {
+    display: none;
+    gap: 15px;
+
+    @media (max-width: 992px) {
+      display: flex;
+    }
+
+    .mobile-navbar-left-icon {
+      width: 32px;
+      height: 32px;
+      padding: 6px;
+      border-radius: 100%;
+      background-color: $white;
+      box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.1);
+      cursor: pointer;
+    }
+  }
+
+  .navbar-left {
+    gap: 60px;
+
+    .regions-dropdown {
+      gap: 10px;
+      cursor: pointer;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+
+      & > p {
+        @include typoP($typo-header-color);
+      }
+    }
+  }
+
+  .navbar-right {
+    gap: 32px;
+
+    .navbar-right-icons-container {
+      gap: 20px;
+
+      & > div {
+        padding: 4px 12px;
+        border-radius: 30px;
+        gap: 4px;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        &:hover {
+          background-color: $gray-50;
+        }
+
+        & > span {
+          color: $white;
+          font-size: 11px;
+          font-weight: 400;
+          line-height: 14px;
+          padding: 2px 8px;
+          border-radius: 100px;
+          background-color: $primary-500;
+        }
+      }
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .lang-btn {
+      @include buttonLG($gray-50, $typo-header-color, 8px 12px);
+      gap: 6px;
+    }
+
+    .login-btn {
+      @include buttonLG($primary-500, $white, 14px 38px);
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+}

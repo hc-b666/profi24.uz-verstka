@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+ul, ol {
+  list-style: none;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }

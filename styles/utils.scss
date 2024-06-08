@@ -25,38 +25,37 @@
   }
 }
 
-.flex {
-  display: flex;
+// Flexbox utilities
+$flexbox: (
+  "flex": (display: flex),
+  "flex-row": (flex-direction: row),
+  "flex-col": (flex-direction: column),
+  "align-start": (align-items: flex-start),
+  "align-center": (align-items: center),
+  "align-end": (align-items: flex-end),
+  "justify-start": (justify-content: flex-start),
+  "justify-center": (justify-content: center),
+  "justify-end": (justify-content: flex-end),
+  "justify-around": (justify-content: space-around), 
+  "justify-between": (justify-content: space-between),
+  "justify-evenly": (justify-content: space-evenly),
+  "self-start": (align-self: flex-start),
+  "self-center": (align-self: center),
+  "self-end": (align-self: flex-end),
+  "wrap": (flex-wrap: wrap),
+  "no-wrap": (flex-wrap: nowrap),
+);
+
+// Function to generate utilities
+@mixin generate-utilities($map) {
+  @each $class, $styles in $map {
+    .#{$class} {
+      @each $property, $value in $styles {
+        #{$property}: #{$value};
+      }
+    }
+  }
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.align-start {
-  align-items: flex-start;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.self-center {
-  align-self: center;
-}
+// Generate utilities
+@include generate-utilities($flexbox);
