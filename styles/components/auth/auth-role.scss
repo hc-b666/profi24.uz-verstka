@@ -1,0 +1,121 @@
+.auth-role-main {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  // Main Container
+  .container {
+    gap: 60px;
+
+    @media (max-width: $breakpoint-xl) {
+      align-items: center;
+    }
+
+    h3 {
+      @include typoH3($typo-header-color);    
+    }
+
+    .roles-container {
+      gap: 20px;
+
+      .role-card {
+        width: 380px;
+        padding: 30px 32px 44px;
+        border: 1px solid $gray-300;
+        border-radius: 15px;
+        background-color: $white;
+        gap: 20px;
+        position: relative;
+        cursor: pointer;
+        transition: all .4s;
+
+        h4 {
+          @include typoH4($typo-header-color);
+        }
+
+        p {
+          @include typoP($typo-header-color);
+          color: rgba(118, 118, 118, 1);
+        }
+
+        button {
+          width: 25px;
+          height: 25px;
+          border-radius: 100px;
+          background-color: $gray-50;
+          box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.05);
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          transition: all .4s;
+        }
+
+        &:hover {
+          border-color: $primary-500;
+
+          h4 {
+            color: $primary-500;
+          }
+
+          p {
+            color: $typo-header-color;
+          }
+
+          button {
+            background-color: $primary-500;
+          }
+        }
+      }
+    }
+  }
+
+  // Background Image
+  .bg-box-top-right {
+    width: 25%;
+    height: 35%;
+    background-color: $primary-500;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
+  }
+
+  .bg-box-bottom-right {
+    width: 50%;
+    height: 65%;
+    border-top-left-radius: 100px;
+    background-color: $primary-500;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
+  }
+
+  .auth-bg-image {
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      height: 90%;
+      right: 5%;
+    }
+
+    @media (min-width: 2240px) {
+      right: 10%;
+    }
+  }
+}

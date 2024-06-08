@@ -85,6 +85,10 @@
     .login-btn {
       @include buttonLG($primary-500, $white, 14px 38px);
 
+      a {
+        color: $white;
+      }
+
       @media (max-width: 992px) {
         display: none;
       }
