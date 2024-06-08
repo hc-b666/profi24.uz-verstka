@@ -84,9 +84,14 @@
 
     .login-btn {
       @include buttonLG($primary-500, $white, 14px 38px);
+      transition: all 0.4s;
 
       a {
         color: $white;
+      }
+
+      &:hover {
+        background-color: $primary-600;
       }
 
       @media (max-width: 992px) {

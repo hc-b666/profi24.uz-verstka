@@ -75,34 +75,45 @@
 
 
     <!-- Main -->
-    <main class="auth-phone-main flex flex-col justify-center">
+    <main class="auth-confirm-main flex flex-col justify-center">
       
       <!-- Main Content -->
       <div class="container flex flex-col">
 
         <!-- Go back -->
-         <a href="../auth-role/auth-role.html">
+        <a href="../auth-role/auth-role.html">
           <div class="go-back flex align-center">
             <button class="flex align-center justify-center">
               <img src="../../../assets/icons/arrow-left.svg" alt="Arrow Left Icon" width="8px" height="8px">
             </button>
             <h6>Выбрать другую роль</h6>
           </div>
-         </a>
+        </a>
 
-         <!-- Title -->
-        <h3>Вход или регистрация <br> для частных лиц</h3>
+        <!-- Auth Confirm Content -->
+        <div class="auth-confirm-description flex flex-col">
+          <!-- Title -->
+          <h3>Подверждение номера</h3>
 
-        <!-- Phone Input | Form -->
-        <form class="flex flex-col align-start">
-          <div>
-            <img src="../../../assets/icons/call.svg" alt="Call Icon">
-            <input type="tel" placeholder="Номер телефона" required>
+          <!-- Description -->
+          <p>Введите код из SMS, отправленного на номер +998 99 933 08 07</p>
+        </div>
+        
+        <!-- Form -->
+        <form class="flex flex-col">
+          <div class="code-confirm-container">
+            <input type="text" maxlength="1" required>
+            <input type="text" maxlength="1" required>
+            <input type="text" maxlength="1" required>
+            <input type="text" maxlength="1" required>
+            <input type="text" maxlength="1" required>
           </div>
-          <button>
-            <a href="../auth-confirm/auth-confirm.html">Продолжить</a>
-          </button>
+
+          <button>Подтвердить</button>
         </form>
+
+        <!-- Reminder | Time Counter -->
+        <p>Повторная отправка будет доступна через <span>00:56</span> сек.</p>
 
       </div>
 
