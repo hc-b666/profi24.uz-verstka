@@ -17,7 +17,8 @@ main {
 }
 
 input,
-textarea {
+textarea,
+select {
   border: none;
   outline: none;
 }
@@ -36,7 +37,8 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 

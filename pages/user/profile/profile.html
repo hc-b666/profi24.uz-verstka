@@ -143,8 +143,79 @@
         </div>
 
         <!-- Main Content -->
-        <section class="user-profile-main">
-          hello
+        <section class="user-profile-main flex flex-col">
+
+          <!-- User Avatar Container -->
+          <div class="avatar-container flex">
+
+            <div class="avatar-container-image">
+              <!-- <img src="" alt="User Profile Image"> -->
+              <div class="flex align-center justify-center">
+                <img src="../../../assets/icons/edit.svg" alt="Edit Icon">
+              </div>
+            </div>
+
+            <div class="avatar-container-name flex flex-col">
+              <h2>Мурод Исаков</h2>
+              <p>Заказчик</p>
+            </div>
+
+          </div>
+
+          <!-- User Info Form -->
+          <form class="flex flex-col align-start">
+
+            <!-- User Name and Surname Inputs -->
+            <div class="inputs-wrapper">
+
+              <div class="input-container-small flex flex-col">
+                <label for="user-name">Ваше имя</label>
+                <input id="user-name" name="user-name" type="text" placeholder="Мурод" required>
+              </div>
+  
+              <div class="input-container-small flex flex-col">
+                <label for="user-surname">Ваша фамилия</label>
+                <input id="user-surname" name="user-surname" type="text" placeholder="Исаков" required>
+              </div>
+            
+            </div>
+
+            <!-- User phone number inputs -->
+            <div class="inputs-wrapper">
+
+              <div class="input-container-small flex flex-col">
+                <label for="user-phone-number">Телефон</label>
+                <input id="user-phone-number" name="user-phone-number" type="tel" placeholder="+998 99 907 08 06" required>
+              </div>
+  
+              <div class="input-container-small flex flex-col">
+                <label for="user-second-phone-number">Дополнительный номер</label>
+                <input id="user-second-phone-number" name="user-second-phone-number" type="text" placeholder="Введите номер" required>
+              </div>
+            
+            </div>
+
+            <!-- User Address -->
+            <div class="input-container-small flex flex-col">
+              <label for="user-address">Выберите город</label>
+              <select name="user-address" id="user-address" required>
+                <option value="Tashkent">Tashkent</option>
+                <option value="Samarkand">Samarkand</option>
+                <option value="Bukhara">Bukhara</option>
+                <option value="Andijan">Andijan</option>
+              </select>
+            </div>
+
+            <!-- User DoB -->
+            <div class="input-container-small flex flex-col">
+              <label for="user-dob">Дата рождения</label>
+              <input id="user-dob" name="user-dob" type="date" required>
+            </div>
+
+            <button>Сохранить</button>
+
+          </form>
+
         </section>
 
       </div>
