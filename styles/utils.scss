@@ -25,7 +25,7 @@
   }
 }
 
-// Flexbox utilities
+// --------------- Flexbox utilities --------------- //
 $flexbox: (
   "flex": (display: flex),
   "flex-row": (flex-direction: row),
@@ -46,12 +46,21 @@ $flexbox: (
   "no-wrap": (flex-wrap: nowrap),
 );
 
+// --------------- Colors utilities --------------- //
 $colors: (
-  "success-500": (color: $success-500),
-  "danger-500": (color: $danger-500),
+  "color-white": (color: $white),
+  "color-success-500": (color: $success-500),
+  "color-danger-500": (color: $danger-500),
 );
 
-// Function to generate utilities
+// --------------- Background colors utilities --------------- //
+$background-colors: (
+  "bg-white": (background-color: $white),
+  "bg-success-500": (background-color: $success-500),
+  "bg-danger-500": (background-color: $danger-500),
+);
+
+// --------------- Function to generate utilities --------------- //
 @mixin generate-utilities($map) {
   @each $class, $styles in $map {
     .#{$class} {
@@ -62,6 +71,7 @@ $colors: (
   }
 }
 
-// Generate utilities
+// --------------- Generate utilities --------------- //
 @include generate-utilities($flexbox);
 @include generate-utilities($colors);
+@include generate-utilities($background-colors);

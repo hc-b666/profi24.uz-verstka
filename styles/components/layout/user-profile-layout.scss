@@ -1,7 +1,7 @@
 .user-profile-layout {
   width: 100%;
   padding: 30px 0 150px;
-  background-color: $gray-200;
+  background-color: $gray-50;
 
   .container {
     gap: 30px;
@@ -11,7 +11,6 @@
 
       // User Profile Navbar Top
       .user-profile-navbar-top {
-        
         // User Profile Navbar Top Left
         .user-profile-navbar-top-left {
           gap: 20px;
@@ -43,12 +42,40 @@
         & > button {
           @include buttonDefault($primary-500, $white, 15px 30px 15px 15px, 100px);
           gap: 15px;
+        
+          &:hover {
+            background-color: $primary-600;
+          }
         }
       }
 
       // User Profile Navbar Bottom
       .user-profile-navbar-bottom {
-        
+        padding: 20px;
+        background-color: $white;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        a {
+          width: 100%;
+        }
+
+        button {
+          width: 100%;
+          @include buttonDefault($gray-50, $black, 16px 30px, 10px);
+          gap: 15px;
+        }
+
+        .active {
+          background-color: $primary-500;
+          color: $white;
+
+          &:hover {
+            background-color: $primary-600;
+          }
+        }
       }
     }
   }
