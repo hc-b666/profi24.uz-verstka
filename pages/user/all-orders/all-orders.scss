@@ -1,0 +1,54 @@
+.user-all-orders-main {
+  width: 100%;
+  gap: 30px;
+
+  .table-head {
+    width: 100%;
+    padding: 30px 60px;
+    border-radius: 15px;
+    background-color: $white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+    h6 {
+      @include typoH6($typo-header-color);
+      font-weight: 500;
+    }
+  }
+
+  .table-body {
+    width: 100%;
+
+    .table-body-row {
+      padding: 30px 60px;
+      background-color: $white;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+
+      p {
+        @include typoP($typo-header-color);
+      }
+
+      span {
+        @include buttonDefault($success-500, $white, 10px 20px, 100px);
+        text-align: center;
+      }
+
+      &:first-child {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+
+      &:nth-of-type(odd) {
+        background-color: rgba(239, 254, 255, 1);
+      }
+    }
+  }
+}
