@@ -39,7 +39,7 @@
         }
 
         // User Profile Navbar Top Right
-        & > button {
+        button {
           @include buttonDefault($primary-500, $white, 15px 30px 15px 15px, 100px);
           gap: 15px;
         
