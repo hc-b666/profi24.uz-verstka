@@ -1,0 +1,56 @@
+.user-tariffs-main {
+  padding: 80px;
+  border-radius: 15px;
+  background-color: $white;
+  gap: 40px;
+
+  h2 {
+    @include typoH2($typo-header-color);
+  }
+
+  form {
+    width: 450px;
+    gap: 30px;
+
+    p {
+      @include typoPLead($primary-500);
+      font-weight: 500;
+    }
+
+    & > div {
+      gap: 15px;
+    
+      .tariff-card {
+        padding: 20px;
+        background-color: $gray-50;
+        border-radius: 10px;
+  
+        p {
+          @include buttonDefault($primary-500, $white, 5px 0, 100px);
+          width: 105px;
+        }
+  
+        h6 {
+          @include typoH6($typo-header-color);
+          font-weight: 500;
+        }
+  
+        button {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          background-color: $white;
+        }
+  
+        &:active {
+          border: 1px solid $primary-500;
+        }
+      }
+    }
+
+    & > button {
+      @include buttonLG($secondary-500, $white, 20px 40px);
+      align-self: flex-start;
+    }
+  }
+}
