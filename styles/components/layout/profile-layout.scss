@@ -1,4 +1,4 @@
-.user-profile-layout {
+.profile-layout {
   width: 100%;
   padding: 30px 0 150px;
   background-color: $gray-50;
@@ -6,13 +6,13 @@
   .container {
     gap: 30px;
 
-    .user-profile-navbar {
+    .profile-navbar {
       gap: 30px;
 
       // User Profile Navbar Top
-      .user-profile-navbar-top {
+      .profile-navbar-top {
         // User Profile Navbar Top Left
-        .user-profile-navbar-top-left {
+        .profile-navbar-top-left {
           gap: 20px;
 
           .user-id {
@@ -50,7 +50,7 @@
       }
 
       // User Profile Navbar Bottom
-      .user-profile-navbar-bottom {
+      .profile-navbar-bottom {
         padding: 20px;
         background-color: $white;
         border-radius: 20px;

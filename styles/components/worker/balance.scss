@@ -1,0 +1,55 @@
+.user-balance-main {
+  padding: 80px;
+  border-radius: 20px;
+  background-color: $white;
+  gap: 40px;
+
+  .user-balance-header {
+    gap: 20px;
+
+    h2 {
+      @include typoH2($typo-header-color);
+    }
+
+    span {
+      @include buttonLG($gray-50, $black, 20px 40px);
+    }
+  }
+
+  .payment-method {
+    gap: 20px;
+
+    p {
+      @include typoP($typo-muted-text);
+    }
+
+    .payment-method-container {
+      width: 630px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+
+      .payment-method-card {
+        height: 180px;
+        border: 1px solid $gray-300;
+        border-radius: 15px;
+        background-color: $white;
+
+        &:active {
+          border: 1px solid $primary-500;
+        }
+      }
+
+    }
+  }
+
+  form {
+    width: 630px;
+    gap: 30px;
+
+    button {
+      @include buttonLG($secondary-500, $white, 20px 40px);
+      align-self: flex-start;
+    }
+  }
+}

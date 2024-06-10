@@ -75,19 +75,23 @@
 
 
     <!-- Main -->
-    <main class="user-profile-layout">
+    <main class="profile-layout">
       <div class="container flex flex-col">
         
         <!-- User Profile Navbar -->
-        <div class="user-profile-navbar flex flex-col ">
+        <div class="profile-navbar flex flex-col ">
 
           <!-- User Profile Navbar Top -->
-          <div class="user-profile-navbar-top flex align-center justify-between">
+          <div class="profile-navbar-top flex align-center justify-between">
             
             <!-- User Profile Navbar Top Left -->
-            <div class="user-profile-navbar-top-left flex align-center">
+            <div class="profile-navbar-top-left flex align-center">
               <div class="user-id">
                 <h6>id: 14583</h6>
+              </div>
+              <div class="flex align-center">
+                <img src="../../../assets/icons/add.svg" alt="Add Icon">
+                <h6>Баланс: <span class="font-semibold">500 000 UZS</span></h6>
               </div>
               <div class="flex align-center">
                 <img src="../../../assets/icons/unchecked.svg" alt="Unchecked Icon">
@@ -110,7 +114,7 @@
           </div>
 
           <!-- User Profile Navbar Bottom -->
-          <div class="user-profile-navbar-bottom">
+          <div class="profile-navbar-bottom">
 
             <a href="../profile/profile.html">
               <button class="flex align-center">
@@ -166,9 +170,39 @@
         </div>
 
         <!-- Main Content -->
-        <section class="user-profile-main flex flex-col">
+        <section class="user-balance-main flex flex-col">
 
-          balance page
+          <!-- User Balance Header -->
+          <div class="user-balance-header flex align-center">
+            <h2>Пополнение счета</h2>
+            <span>Баланс: 500 000 UZS</span>
+          </div>
+
+          <!-- Balance Payment Method -->
+          <div class="payment-method flex flex-col">
+            <p>Как вы хотите оплатить?</p>
+            <div class="payment-method-container">
+              <button class="payment-method-card flex align-center justify-center">
+                <img src="../../../assets/icons/bank-cards/click.svg" alt="Click Icon" width="130px" height="60px">
+              </button>
+              <button class="payment-method-card flex align-center justify-center"> 
+                <img src="../../../assets/icons/bank-cards/payme.svg" alt="Payme Icon" width="70px" height="70px">
+              </button>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form class="flex flex-col">
+  
+            <div class="input-container-small flex flex-col">
+              <label for="payment-total">Сумма</label>
+              <input id="payment-total" name="payment-total" type="text" placeholder="Введите сумму" required>
+            </div>
+
+            <button>Пополнить баланс</button>
+
+          </form>
+
 
         </section>
 

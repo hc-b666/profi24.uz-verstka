@@ -60,6 +60,23 @@ $background-colors: (
   "bg-danger-500": (background-color: $danger-500),
 );
 
+// --------------- Text properties utilities --------------- //
+$text-props: (
+  "text-left": (text-align: left),
+  "text-center": (text-align: center),
+  "text-right": (text-align: right),
+  "text-justify": (text-align: justify),
+  "underline": (text-decoration: underline),
+  "line-through": (text-decoration: line-through),
+  "uppercase": (text-transform: uppercase),
+  "lowercase": (text-transform: lowercase),
+  "capitalize": (text-transform: capitalize),
+  "font-normal": (font-weight: 400),
+  "font-medium": (font-weight: 500),
+  "font-semibold": (font-weight: 600),
+  "font-bold": (font-weight: 700),
+);
+
 // --------------- Function to generate utilities --------------- //
 @mixin generate-utilities($map) {
   @each $class, $styles in $map {
@@ -75,3 +92,4 @@ $background-colors: (
 @include generate-utilities($flexbox);
 @include generate-utilities($colors);
 @include generate-utilities($background-colors);
+@include generate-utilities($text-props);

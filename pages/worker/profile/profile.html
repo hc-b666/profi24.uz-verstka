@@ -75,19 +75,23 @@
 
 
     <!-- Main -->
-    <main class="user-profile-layout">
+    <main class="profile-layout">
       <div class="container flex flex-col">
         
         <!-- User Profile Navbar -->
-        <div class="user-profile-navbar flex flex-col ">
+        <div class="profile-navbar flex flex-col ">
 
           <!-- User Profile Navbar Top -->
-          <div class="user-profile-navbar-top flex align-center justify-between">
+          <div class="profile-navbar-top flex align-center justify-between">
             
             <!-- User Profile Navbar Top Left -->
-            <div class="user-profile-navbar-top-left flex align-center">
+            <div class="profile-navbar-top-left flex align-center">
               <div class="user-id">
                 <h6>id: 14583</h6>
+              </div>
+              <div class="flex align-center">
+                <img src="../../../assets/icons/add.svg" alt="Add Icon">
+                <h6>Баланс: <span class="font-semibold">500 000 UZS</span></h6>
               </div>
               <div class="flex align-center">
                 <img src="../../../assets/icons/unchecked.svg" alt="Unchecked Icon">
@@ -110,7 +114,7 @@
           </div>
 
           <!-- User Profile Navbar Bottom -->
-          <div class="user-profile-navbar-bottom">
+          <div class="profile-navbar-bottom">
 
             <a href="#">
               <button class="active flex align-center">
@@ -229,10 +233,42 @@
               </select>
             </div>
 
-            <!-- User DoB -->
+            <!-- User DoB and years of exp -->
+            <div class="inputs-wrapper">
+
+              <div class="input-container-small flex flex-col">
+                <label for="user-dob">Дата рождения</label>
+                <input id="user-dob" name="user-dob" type="date" required>
+              </div>
+  
+              <div class="input-container-small flex flex-col">
+                <label for="user-experience">Опыть работа</label>
+                <select id="user-experience" name="user-experience" placeholder="Введите номер" required>
+                  <option value="1">1 год</option>
+                  <option value="2">2 года</option>
+                  <option value="3">3 года</option>
+                  <option value="4">4 года</option>
+                  <option value="5">5 лет</option>
+                  <option value="6">6 лет</option>
+                  <option value="7">7 лет</option>
+                  <option value="8">8 лет</option>
+                  <option value="9">9 лет</option>
+                  <option value="10">10 лет</option>
+                </select>
+              </div>
+            
+            </div>
+
+            <!-- User Education -->
             <div class="input-container-small flex flex-col">
-              <label for="user-dob">Дата рождения</label>
-              <input id="user-dob" name="user-dob" type="date" required>
+              <label for="user-education">Образование</label>
+              <input id="user-education" name="user-education" type="text" placeholder="Среднее специальное" required>
+            </div>
+
+            <!-- User About -->
+            <div class="input-container-small flex flex-col">
+              <label for="user-about">О себе</label>
+              <textarea id="user-about" name="user-about" placeholder="Расскажите немного о себе" required></textarea>
             </div>
 
             <button>Сохранить</button>
