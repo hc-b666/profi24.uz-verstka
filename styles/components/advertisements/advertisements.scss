@@ -1,0 +1,14 @@
+.advertisements-section {
+  gap: 50px;
+
+  .advertisements-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  & > button {
+    @include buttonDefault($secondary-500, $white, 20px 60px, 100px);
+  }
+}
