@@ -43,58 +43,6 @@
     width: 630px;
     gap: 30px;
 
-    .inputs-wrapper {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-    }
-
-    .input-container {
-      width: 100%;
-      gap: 20px;
-
-      label {
-        @include typoP($typo-muted-text);
-      }
-
-      input {
-        @include typoH6($black);
-        font-weight: 500;
-        padding: 20px 30px;
-        width: 100%;
-        border: 1px solid $gray-300;
-        border-radius: 10px;
-
-        &::placeholder {
-          @include typoH6($black);
-          font-weight: 500;
-        }
-
-        &:focus {
-          border-color: $primary-500;
-
-          &::placeholder {
-            color: $primary-500;
-          }
-        }
-      }
-
-      select {
-        @include typoH6($black);
-        font-weight: 500;
-        padding: 20px 30px;
-        width: 100%;
-        border: 1px solid $gray-300;
-        border-radius: 10px;
-
-        &:focus {
-          color: $primary-500;
-          border-color: $primary-500;
-        }
-      }
-    }
-
     button {
       @include buttonLG($secondary-500, $white, 20px 60px);
     }

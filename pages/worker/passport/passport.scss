@@ -1,0 +1,40 @@
+.user-passport-main {
+  padding: 80px;
+  border-radius: 20px;
+  background-color: $white;
+
+  form {
+    width: 520px;
+    gap: 30px;
+
+    .passport-type {
+      gap: 20px;
+
+      p {
+        @include typoP($typo-muted-text);
+      }
+
+      & > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        button {
+          @include buttonLG(transparent, $black, 20px 0);
+          border: 1px solid $gray-300;
+          border-radius: 10px;
+
+          &:active {
+            color: $primary-500;
+            border-color: $primary-500;
+          }
+        }
+      } 
+    }
+
+    & > button {
+      @include buttonLG($secondary-500, $white, 20px 60px);
+      align-self: flex-start;
+    }
+  }
+}

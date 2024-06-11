@@ -174,9 +174,48 @@
         </div>
 
         <!-- Main Content -->
-        <section class="user-profile-main flex flex-col">
+        <section class="user-passport-main flex flex-col">
 
-          passport scan page
+          <form class="flex flex-col">
+
+            <!-- Type of passport -->
+            <div class="passport-type flex flex-col">
+              <p>Вид паспорта</p>
+              <div>
+                <button type="button">ID карта</button>
+                <button type="button">Пасспорт</button>
+              </div>
+            </div>
+
+            <!-- Details of passport -->
+            <div class="inputs-wrapper">
+
+              <div class="input-container flex flex-col">
+                <label for="user-passport-series">Серия</label>
+                <select id="user-passport-series" name="user-passport-series" type="text" placeholder="AC" required>
+                  <option value="AC">AA</option>
+                  <option value="AC">AB</option>
+                  <option value="AC">AC</option>
+                  <option value="AC">AD</option>
+                </select>
+              </div>
+              
+              <div class="input-container flex flex-col">
+                <label for="user-passport-number">Номер паспорта</label>
+                <input id="user-passport-number" name="user-passport-number" type="text" placeholder="000 00 00" required>
+              </div>
+
+            </div>
+
+            <!-- Passport Photo -->
+            <div class="input-container flex flex-col">
+              <label for="user-passport-photo">Фото</label>
+              <input id="user-passport-photo" name="user-passport-photo" type="file" required>
+            </div>
+
+            <button type="submit">Отправить</button>
+
+          </form>
 
         </section>
 
