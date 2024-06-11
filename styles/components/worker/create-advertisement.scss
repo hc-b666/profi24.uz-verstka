@@ -75,5 +75,10 @@
         color: $primary-500;
       }
     }
+
+    button {
+      @include buttonLG($secondary-500, $white, 20px 40px);
+      align-self: flex-start;
+    }
   }
 }
