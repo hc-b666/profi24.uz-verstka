@@ -1,0 +1,164 @@
+.advertisements-layout {
+  width: 100%;
+  background-color: $white;
+
+  .search-container {
+    width: 100%;
+    padding: 55px 0;
+    background-color: $primary-500;
+    position: relative;
+    overflow: hidden;
+
+    .container {
+      gap: 20px;
+
+      .search-input {
+        input {
+          padding: 20px 40px;
+        }
+
+        button {
+          right: 10px;
+        }
+      }
+
+      .search-output {
+        button {
+          color: $white;
+          background-color: transparent;
+          border: 1px solid $primary-400;
+
+          &:active {
+            border: none;
+            background-color: $secondary-500;
+          }
+        }
+      }
+    }
+
+    .circle-left {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      background-color: $secondary-500;
+      position: absolute;
+      left: -15px;
+      bottom: -10%;
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+
+      @media (min-width: 1560px) {
+        width: 150px;
+        height: 150px;
+        left: -25px;
+        bottom: -20%;
+      }
+    }
+
+    .circle-right {
+      width: 75px;
+      height: 75px;
+      border-radius: 100%;
+      background-color: $secondary-500;
+      position: absolute;
+      top: -10%;
+      right: -15px;
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+
+      @media (min-width: 1560px) {
+        width: 100px;
+        height: 100px;
+        right: -25px;
+        top: -20%;
+      }
+    }
+  }
+
+  .breadcrumb-container {
+    padding: 26px 0;
+    box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.1);
+
+    .container {
+      .breadcrumb {
+        gap: 15px;
+
+        h6 {
+          @include typoH6($typo-muted-text);
+          font-weight: 500;
+        }
+
+        .active {
+          color: $primary-500;
+        }
+      }
+
+      & > button {
+        @include buttonDefault(transparent, $primary-500, 10px 20px, 100px);
+        gap: 15px;
+        border: 1px solid $primary-500;
+      }
+    }
+  }
+
+  .advertisements-main {
+    padding: 60px 0 150px;
+    gap: 100px;
+
+    .advertisements-main-content {
+      .container {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 30px;
+
+        & > div {
+          .filter-container {
+            padding: 30px 20px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+            gap: 20px;
+
+            h6 {
+              @include typoH6($typo-header-color);
+            }
+
+            .input-container {
+              gap: 15px;
+
+              label {
+                color: $typo-header-color;
+              }
+
+              select,
+              input {
+                padding: 16px 20px;
+              }
+            }
+
+            button {
+              @include buttonDefault($secondary-500, $white, 12px 0, 30px);
+              width: 100%;
+
+              &:last-child {
+                color: $typo-header-color;
+                border: 1px solid $secondary-500;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+
+        .advertisements-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+        }
+      }
+    }
+  }
+}
