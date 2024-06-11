@@ -1,0 +1,79 @@
+.user-create-advertisement-main {
+  padding: 80px;
+  border-radius: 20px;
+  background-color: $white;
+  gap: 40px;
+
+  h2 {
+    @include typoH2($typo-header-color);
+  }
+
+  form {
+    width: 630px;
+    gap: 30px;
+
+    .input-container {
+      .image-inputs {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        .image-upload-container {
+          width: 100%;
+          height: 130px;
+          position: relative;
+          border: 1px solid $gray-300;
+          border-radius: 15px;
+          cursor: pointer;
+
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .input-top {
+      gap: 20px;
+
+      h4 {
+        @include typoH4($typo-header-color);
+      }
+
+      .switch {
+        width: 55px;
+        height: 30px;
+        border-radius: 100px;
+        background-color: $gray-200;
+        position: relative;
+        cursor: pointer;
+
+        .circle {
+          width: 20px;
+          height: 20px;
+          border-radius: 100px;
+          background-color: $primary-500;
+          position: absolute;
+          top: 50%;
+          left: 5px;
+          transform: translate(0, -50%);
+          transition: .4s;
+        }
+
+        .active {
+          transform: translate(25px, -50%);
+        }
+      }
+    }
+
+    & > p {
+      @include typoPLead($typo-muted-text);
+      font-weight: 500;
+
+      span {
+        color: $primary-500;
+      }
+    }
+  }
+}
