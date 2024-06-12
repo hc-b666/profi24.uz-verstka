@@ -5,6 +5,11 @@
   border-radius: 20px;
   gap: 50px;
 
+  @media (max-width: $breakpoint-lg) {
+    padding: 30px;
+    gap: 20px;
+  }
+
   .avatar-container {
     gap: 20px;
 
@@ -42,6 +47,10 @@
   form {
     width: 630px;
     gap: 30px;
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
 
     button {
       @include buttonLG($secondary-500, $white, 20px 60px);

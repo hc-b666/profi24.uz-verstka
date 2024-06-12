@@ -1,9 +1,20 @@
 .user-active-orders-main {
   width: 100%;
-  gap: 30px;
+  overflow: hidden;
+  
+  .table-container {
+    width: 100%;
+    gap: 30px;
+    overflow-x: auto;
+
+    @media (max-width: $breakpoint-md) {
+      min-width: 600px;
+    }
+  }
 
   .table-head {
     width: 100%;
+    min-width: 600px;
     padding: 30px 60px;
     border-radius: 15px;
     background-color: $white;
@@ -19,6 +30,7 @@
 
   .table-body {
     width: 100%;
+    min-width: 600px;
 
     .table-body-row {
       padding: 30px 60px;
@@ -38,6 +50,10 @@
 
       button {
         @include buttonDefault($danger-500, $white, 10px 20px, 100px);
+
+        &:hover {
+          background-color: $danger-600;
+        }
       }
 
       &:first-child {

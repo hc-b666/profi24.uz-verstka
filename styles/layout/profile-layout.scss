@@ -11,9 +11,19 @@
 
       // User Profile Navbar Top
       .profile-navbar-top {
+        @media (max-width: $breakpoint-lg) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 30px;
+        }
+
         // User Profile Navbar Top Left
         .profile-navbar-top-left {
           gap: 20px;
+
+          @media (max-width: $breakpoint-md) {
+            flex-wrap: wrap;
+          }
 
           .user-id {
             padding: 15px 30px;
@@ -57,6 +67,15 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
+
+        @media (max-width: $breakpoint-sm) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+          grid-template-columns: repeat(2, 1fr);
+        }
 
         a {
           width: 100%;
