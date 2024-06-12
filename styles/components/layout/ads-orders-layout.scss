@@ -1,4 +1,4 @@
-.advertisements-layout {
+.ads-orders-layout {
   width: 100%;
   background-color: $white;
 
@@ -105,11 +105,11 @@
     }
   }
 
-  .advertisements-main {
+  .ads-orders-main {
     padding: 60px 0 150px;
     gap: 100px;
 
-    .advertisements-main-content {
+    .ads-orders-main-content {
       .container {
         display: grid;
         grid-template-columns: 300px 1fr;
