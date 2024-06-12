@@ -1,0 +1,680 @@
+
+// --------------- Search Section --------------- //
+.search-section {
+  width: 100%;
+
+  .container {
+    gap: 14px;
+  }
+}
+
+// --------------- Banner Section --------------- //
+.banner-section {
+  width: 100%;
+
+  .container {
+    .carousel {
+      width: 100%;
+      height: 500px;
+      border-radius: 40px;
+      background-color: $primary-500;
+      overflow: hidden;
+      position: relative;
+
+      .carousel-dots {
+        gap: 10px;
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+
+        .dot {
+          width: 15px;
+          height: 15px;
+          border-radius: 40px;
+          border: 1px solid $white;
+          cursor: pointer;
+        }
+
+        .active {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+
+// --------------- Statistics Section --------------- //
+.statistics-section {
+  width: 100%;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xxl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .statistics-card {
+      padding: 10px;
+      width: 100%;
+      border-radius: 60px;
+      box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.05);
+      gap: 10px;
+
+      .statistics-card-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background-color: $primary-500;
+      }
+
+      .statistics-card-content {
+        gap: 5px;
+
+        & > h3 {
+          @include typoH3($primary-500);
+          font-weight: 700;
+        }
+
+        & > p {
+          @include typoP($typo-muted-text);
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+// --------------- Categories Section --------------- //
+.categories-section {
+  width: 100%;
+
+  .container {
+    padding: 48px 32px;
+    border-radius: 30px;
+    background-color: $gray-50;
+    gap: 38px;
+
+    & > h2 {
+      @include typoH2($black);
+
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
+      }
+    }
+
+    & > button {
+      @include buttonLG($black, $white, 14px 48px);
+      align-self: center;
+    }
+
+    .categories-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xxl) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category-card {
+        padding: 30px;
+        width: 100%;
+        height: 225px;
+        border-radius: 30px;
+        background-color: $white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 1s ease;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          z-index: 0;
+          opacity: 1;
+          transition: all 1s ease;
+        }
+
+        & > h4 {
+          @include typoH4($typo-header-color);
+          position: relative;
+          z-index: 100;
+        }
+
+        &:hover {
+          background-color: $primary-500;
+
+          & > img {
+            opacity: 0;
+          }
+
+          & > h4 {
+            color: $white;
+          }
+
+          .category-card-description {
+            opacity: 1;
+          }
+        }
+
+        .category-card-description {
+          height: 100%;
+          overflow-y: auto;
+          transition: all 1s ease;
+          opacity: 0;
+          gap: 4px;
+
+          &::-webkit-scrollbar {
+            width: 4px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: #fff;
+          }
+
+          & > a {
+            color: $white;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 22px;
+          }
+        }    
+      }
+
+      .create-card {
+        padding: 30px;
+        width: 100%;
+        height: 225px;
+        border-radius: 30px;
+        background-color: $white;
+        gap: 16px;
+
+        & > h4 {
+          @include typoH4($typo-header-color, center);
+        }
+
+        button {
+          @include buttonDefault($gradient-color, $white, 12px 24px, 100px);
+          background: $gradient-color;
+        }
+      }
+    }
+  }
+}
+
+// --------------- Steps Section --------------- //
+.steps-section {
+  width: 100%;
+
+  .container {
+    gap: 38px;
+
+    & > h2 {
+      @include typoH2($black);
+
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
+      }
+    }
+
+    .steps-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+
+      @media (max-width: $breakpoint-md) {
+        padding: 20px;
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xxl) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .step-card {
+        padding: 30px;
+        border-radius: 30px;
+        box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.1);
+        gap: 32px;
+        transition: all 0.4s;
+        cursor: pointer;
+
+        @media (max-width: $breakpoint-md) {
+          min-width: 350px;
+        }
+
+        .step-card-image {
+          h3 {
+            @include typoH3($gray-300);
+            color: $gray-300;
+            align-self: flex-start;
+          }
+        }
+
+        .step-card-description {
+          gap: 16px;
+
+          h4 {
+            @include typoH4($typo-header-color, center);
+          }
+
+          p {
+            @include typoP($typo-muted-text, center);
+          }
+        }
+
+        &:hover {
+          .step-card-image {
+            h3 {
+              color: $primary-500;
+            }
+          }
+
+          .step-card-description {
+            h4 {
+              color: $primary-500;
+            }
+          }
+        }
+      }
+    }
+
+    h5 {
+      @include typoH5($primary-500, center);
+      padding-right: 4px;
+
+      & > span {
+        @include typoPLead($typo-header-color);
+      }
+    }
+  }
+}
+
+// --------------- Top Workers Section --------------- //
+.top-workers-section {
+  width: 100%;
+
+  .container {
+    gap: 38px;
+
+    & > h2 {
+      @include typoH2($black);
+
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
+      }
+    }
+
+    .top-workers-container {
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .top-workers-controls {
+      gap: 20px;
+
+      & > button {
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        background-color: $white;
+        box-shadow: 0px 2px 4px 0px rgba(165, 163, 174, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+// --------------- Professionals Section --------------- //
+.professionals-section {
+  width: 100%;
+
+  .container {
+    padding: 30px 100px;
+    height: 480px;
+    border-radius: 30px;
+    background-color: $gray-50;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 30px;
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    .professionals-description {
+      gap: 30px;
+
+      h1 {
+        @include typoH1($typo-header-color);
+      }
+
+      p {
+        @include typoPLead($typo-header-color);
+      }
+
+      button {
+        @include buttonLG($primary-500, $white, 14px 38px);
+      }
+    }
+
+    .professionals-content {
+      width: 100%;
+      height: 400px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      overflow: hidden;
+      position: relative;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        background: linear-gradient(
+          360deg,
+          #f8f8f8 0%,
+          rgba(248, 248, 248, 0.04) 100%
+        );
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        background: linear-gradient(
+          180deg,
+          #f8f8f8 0%,
+          rgba(248, 248, 248, 0.04) 100%
+        );
+      }
+
+      .professionals-content-1,
+      .professionals-content-2 {
+        gap: 20px;
+        height: 100%;
+        position: relative;
+      }
+
+      .professionals-content-1 {
+        animation: scroll-down 20s linear infinite;
+      }
+
+      .professionals-content-2 {
+        animation: scroll-up 20s linear infinite;
+
+        @media (max-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+
+      .professional-card {
+        padding: 20px;
+        border-radius: 20px;
+        background-color: $white;
+        gap: 16px;
+        cursor: pointer;
+
+        h6 {
+          @include typoH6($typo-header-color);
+        }
+
+        p {
+          @include typoPLead($typo-muted-text);
+          color: $typo-muted-text;
+        }
+      }
+
+      @keyframes scroll-up {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-50%);
+        }
+      }
+
+      @keyframes scroll-down {
+        0% {
+          transform: translateY(-50%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+// --------------- Orders Section --------------- //
+.orders-section {
+  width: 100%;
+
+  .container {
+    gap: 38px;
+
+    .orders-section-header {
+      h2 {
+        @include typoH2($typo-header-color);
+      }
+      & > button {
+        @include buttonDefault($primary-500, $white, 12px 24px, 100px);
+      }
+    }
+
+    .orders-container {
+      padding: 10px;
+      width: 100%;
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .orders-control {
+      gap: 20px;
+
+      & > button {
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        background-color: $white;
+        box-shadow: 0px 2px 4px 0px rgba(165, 163, 174, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+// --------------- Experts Section --------------- //
+.experts-section {
+  width: 100%;
+
+  .container {
+    padding-top: 32px;
+    border-radius: 50px;
+    background-color: $gray-50;
+    padding-inline: 100px;
+    gap: 50px;
+
+    @media (max-width: $breakpoint-xl) {
+      padding-top: 48px;
+      padding-inline: 48px;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media (max-width: $breakpoint-xxl) {
+      gap: 30px;
+    }
+
+    .experts-content {
+      gap: 40px;
+
+      .experts-content-description {
+        gap: 20px;
+
+        h2 {
+          @include typoH2($typo-header-color);
+        }
+
+        p {
+          @include typoPLead($typo-muted-text);
+        }
+
+        @media (max-width: $breakpoint-xl) {
+          h2,
+          p {
+            text-align: center;
+          }
+        }
+      }
+
+      .experts-content-image {
+        gap: 20px;
+      
+        @media (max-width: $breakpoint-xl) {
+          align-self: center;
+        }
+      }
+    }
+
+    .experts-image {
+      img {
+        padding: 32px 32px 0 32px;
+      }
+
+      @media (max-width: $breakpoint-xl) {
+        img {
+          padding: 0;
+          width: 320px;
+        }
+      }
+    }
+  }
+}
+
+// --------------- FAQ Section --------------- //
+.faq-section {
+  width: 100%;
+
+  .container {
+    gap: 38px;
+
+    h2 {
+      @include typoH2($typo-header-color);
+
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
+      }
+    }
+
+    .faq-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      & > div {
+        gap: 24px;
+
+        .accordion {
+          padding: 16px 24px;
+          border-radius: 50px;
+          background-color: $gray-50;
+          gap: 20px;
+          cursor: pointer;
+
+          p {
+            @include typoPLead($typo-header-color);
+          }
+
+          button {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
