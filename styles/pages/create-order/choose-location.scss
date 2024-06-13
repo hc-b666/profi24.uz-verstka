@@ -1,0 +1,109 @@
+.choose-location-main-content {
+  .container {
+    gap: 30px;
+
+    h2 {
+      @include typoH2($typo-header-color, center);
+    }
+
+    .progress-bar {
+      margin-top: 60px;
+      width: 100%;
+      height: 8px;
+      border-radius: 30px;
+      background-color: $gray-50;
+      position: relative;
+
+      .progress {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-color: $secondary-500;
+      }
+
+      .progress-label {
+        color: $white;
+        font-size: 12px;
+        font-weight: 600;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: $secondary-500;
+        position: absolute;
+        top: -70px;
+        right: -20px;
+
+        &::after {
+          content: "";
+          width: 2px;
+          height: 13px;
+          border-radius: 30px;
+          background-color: $gray-300;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .location-container {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 30px;
+
+      .location-container-left {
+        gap: 30px;
+      }
+
+      .location-container-right {
+        gap: 30px;
+      
+        .map {
+          width: 100%;
+          height: 240px;
+          background-color: $gray-50;
+          border-radius: 20px;
+        }
+      }
+
+      .input-wrapper {
+        gap: 20px;
+
+        label {
+          @include typoH5($typo-header-color);
+          font-weight: 500;
+        }
+
+        textarea {
+          padding: 30px;
+          height: 200px;
+          border-radius: 10px;
+          background-color: $gray-50;
+
+          &::placeholder {
+            @include typoP($typo-muted-text);
+            font-weight: 500;
+          }
+        }
+
+        input {
+          padding: 20px;
+          width: 100%;
+          border-radius: 10px;
+          background-color: $gray-50;
+
+          &::placeholder {
+            @include typoP($typo-muted-text);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    button {
+      @include buttonDefault($secondary-500, $white, 20px 80px, 100px);
+      align-self: flex-end;
+    }
+  }
+}
