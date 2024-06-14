@@ -52,6 +52,10 @@
       grid-template-columns: 5fr 7fr;
       gap: 30px;
 
+      @media (max-width: $breakpoint-lg) {
+        grid-template-columns: 1fr;
+      }
+
       .location-container-left {
         gap: 30px;
       }
@@ -104,6 +108,10 @@
     button {
       @include buttonDefault($secondary-500, $white, 20px 80px, 100px);
       align-self: flex-end;
+
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
     }
   }
 }

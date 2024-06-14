@@ -54,6 +54,16 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 30px;
 
+      @media (max-width: $breakpoint-sm) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+
       .subcategory-card {
         height: 72px;
         border-radius: 20px;
