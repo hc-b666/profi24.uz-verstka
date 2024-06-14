@@ -4,12 +4,17 @@
   background-color: $white;
   gap: 40px;
 
+  @media (max-width: $breakpoint-lg) {
+    padding: 30px;
+    gap: 20px;
+  }
+
   h2 {
     @include typoH2($typo-header-color);
   }
 
   form {
-    width: 450px;
+    max-width: 450px;
     gap: 30px;
 
     p {
