@@ -1,6 +1,6 @@
 "use strict";
 
-import { getId } from "./utils.js";
+import { getId, addClass, removeClass } from "./utils.js";
 
 const ButtonLogout = getId("logout-btn");
 const ModalOverlay = getId("modal-overlay");
@@ -8,33 +8,30 @@ const Modal = getId("modal");
 const LogoutConfirmButton = getId("logout-confirm-btn");
 const LogoutCancelButton = getId("logout-cancel-btn");
 
+function closeModal() {
+  removeClass(ModalOverlay, "modal-overlay");
+  removeClass(Modal, "modal");
+  removeClass(document.body, "no-scroll");
+
+  addClass(ModalOverlay, "hidden");
+  addClass(Modal, "hidden");
+}
+
+
+
 ButtonLogout.addEventListener("click", () => {
-  ModalOverlay.classList.remove("hidden");
-  Modal.classList.remove("hidden");
+  removeClass(ModalOverlay, "hidden");
+  removeClass(Modal, "hidden");
 
-  ModalOverlay.classList.add("modal-overlay", "flex", "align-center", "justify-center");
-  Modal.classList.add("modal", "flex", "flex-col");
-  document.body.classList.add("no-scroll");
+  addClass(ModalOverlay, "modal-overlay", "flex", "align-center", "justify-center");
+  addClass(Modal, "modal", "flex", "flex-col");
+  addClass(document.body, "no-scroll");
 });
 
-ModalOverlay.addEventListener("click", () => {
-  ModalOverlay.classList.remove("modal-overlay");
-  Modal.classList.remove("modal");
-  document.body.classList.remove("no-scroll");
-
-  ModalOverlay.classList.add("hidden");
-  Modal.classList.add("hidden");
-});
+ModalOverlay.addEventListener("click", closeModal);
 
 LogoutConfirmButton.addEventListener("click", () => {
   window.location.href = "/";
 });
 
-LogoutCancelButton.addEventListener("click", () => {
-  ModalOverlay.classList.remove("modal-overlay");
-  Modal.classList.remove("modal");
-  document.body.classList.remove("no-scroll");
-
-  ModalOverlay.classList.add("hidden");
-  Modal.classList.add("hidden");
-});
+LogoutCancelButton.addEventListener("click", closeModal);
