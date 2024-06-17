@@ -64,8 +64,8 @@
             <span>Ру</span>
           </button>
 
-          <button class="login-btn" type="button">
-            <a href="#">Выйти</a>
+          <button id="logout-btn" class="login-btn" type="button">
+            Выйти
           </button>
         </div>
       </div>
@@ -230,6 +230,21 @@
 
 
 
+    <!-- Modal -->
+    <div id="modal-overlay" class="hidden">
+      <div id="modal" class="hidden">
+        <h3>Выйти из аккаунта</h3>
+        <p>Вы уверены, что хотите выйти из своего аккаунта?</p>
+        <div class="flex align-center justify-between">
+          <button id="logout-confirm-btn">Да, выйти</button>
+          <button id="logout-cancel-btn">Нет, остаться</button>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
+
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -334,6 +349,10 @@
       </div>
     </footer>
     <!-- Footer -->
+
+
+    <!-- Scripts -->
+    <script src="../../../scripts/logout.js" type="module"></script>
 
 
   </body>

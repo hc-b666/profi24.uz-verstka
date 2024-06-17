@@ -1,0 +1,46 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .modal {
+    padding: 32px;
+    width: 480px;
+    border: 1px solid $white;
+    border-radius: 30px;
+    background-color: $white;
+    gap: 20px;
+
+    h3 {
+      @include typoH3($typo-header-color);
+      margin-bottom: 10px;
+    }
+
+    p {
+      @include typoP($typo-header-color);
+    }
+
+    div {
+      gap: 20px;
+      
+      #logout-confirm-btn {
+        @include buttonDefault($success-500, $white, 16px 0, 100px);
+        width: 100%;
+      }
+
+      #logout-cancel-btn {
+        @include buttonDefault($danger-500, $white, 16px 0, 100px);
+        width: 100%;
+      }
+    }
+  }
+}
+
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}

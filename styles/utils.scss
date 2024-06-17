@@ -81,6 +81,13 @@ $text-props: (
   "font-bold": (font-weight: 700),
 );
 
+$display-props: (
+  "block": (display: block),
+  "inline-block": (display: inline-block),
+  "inline": (display: inline),
+  "hidden": (display: none),
+);
+
 // --------------- Function to generate utilities --------------- //
 @mixin generate-utilities($map) {
   @each $class, $styles in $map {
@@ -97,3 +104,4 @@ $text-props: (
 @include generate-utilities($colors);
 @include generate-utilities($background-colors);
 @include generate-utilities($text-props);
+@include generate-utilities($display-props);
