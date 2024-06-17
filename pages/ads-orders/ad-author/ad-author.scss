@@ -1,0 +1,98 @@
+.author-layout {
+  padding-bottom: 48px;
+  background-color: $gray-50;
+  
+  .author-profile {
+    margin-bottom: 48px;
+    width: 100%;
+    height: 360px;
+    position: relative;
+
+    .author-profile-background {
+      width: 100%;
+      height: 250px;
+      background-color: $primary-500;
+      position: relative;
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $secondary-500;
+        border-radius: 50%;
+      }
+
+      &::before {
+        width: 150px;
+        height: 150px;
+        top: -75px;
+        left: -20px;
+      }
+
+      &::after {
+        width: 200px;
+        height: 200px;
+        bottom: -90px;
+        right: -30px;
+      }
+    }
+
+    .profile-image-wrap {
+      width: 140px;
+      height: 140px;
+      border: 10px solid $gray-50;
+      border-radius: 100%;
+      position: absolute;
+      top: 180px;
+      left: 5%;
+
+      .profile-image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+        }
+      }
+    }
+
+    .profile-content {
+      width: 1fr;
+      position: absolute;
+      top: 270px;
+      left: 15%;
+
+      div {
+        gap: 20px;
+
+        h3 {
+          @include typoH3($typo-header-color);
+        }
+
+        p {
+          @include typoP($typo-muted-text);
+        }
+      }
+
+      button {
+        @include buttonDefault($secondary-500, $white, 16px 30px, 100px);
+      }
+    }
+  }
+
+  .container {
+    gap: 48px;
+
+    h3 {
+      @include typoH3($typo-header-color, center);
+    }
+
+    & > div {
+      gap: 40px;
+    }
+  }
+}
