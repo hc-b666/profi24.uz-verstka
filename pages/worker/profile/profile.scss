@@ -54,6 +54,10 @@
 
     button {
       @include buttonLG($secondary-500, $white, 20px 60px);
+
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
     }
   }
 }
