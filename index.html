@@ -42,7 +42,7 @@
             />
 
             <!-- Regions Dropdown Container -->
-            <div id="regions-dropdown-container" class="regions-dropdown-container">
+            <div class="regions-dropdown-container">
               <div class="regions-list flex flex-col">
                 <div class="regions-list-option">
                   <p>Ташкент</p>
@@ -92,9 +92,27 @@
             </div>
           </div>
 
-          <button class="lang-btn flex align-center">
+          <button class="lang-btn flex align-center" type="button">
             <img src="./assets/icons/flag-ru.svg" alt="Russian Flag Icon" />
             <span>Ру</span>
+
+            <!-- Lang Dropdown Container -->
+            <div class="lang-dropdown-container flex flex-col">
+
+              <div class="lang-dropdown-option flex align-center">
+                <img src="./assets/icons/flag-ru.svg" alt="Russian Flag Icon" />
+                <p>Ру</p>
+              </div>
+              <div class="lang-dropdown-option flex align-center">
+                <img src="./assets/icons/flag-uz.svg" alt="Uzbek Flag Icon" />
+                <p>O'z</p>
+              </div>
+              <div class="lang-dropdown-option flex align-center">
+                <img src="./assets/icons/flag-uz.svg" alt="English Flag Icon" />
+                <p>En</p>
+              </div>
+
+            </div>
           </button>
 
           <button class="login-btn" type="button">
@@ -1378,7 +1396,7 @@
 
 
     <!-- Script -->
-    <script src="./scripts/regions-dropdown.js" type="module"></script>
+    <script src="./scripts/navbar.js" type="module"></script>
     <!-- Script -->
 
 
