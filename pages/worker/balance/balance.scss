@@ -63,6 +63,10 @@
     button {
       @include buttonLG($secondary-500, $white, 20px 40px);
       align-self: flex-start;
+
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
     }
   }
 }

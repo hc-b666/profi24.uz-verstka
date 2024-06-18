@@ -7,7 +7,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint-xl) {
       grid-template-columns: 1fr;
     }
   }

@@ -4,6 +4,11 @@
   background-color: $white;
   gap: 40px;
 
+  @media (max-width: $breakpoint-lg) {
+    padding: 30px;
+    gap: 20px;
+  }
+
   h2 {
     @include typoH2($typo-header-color);
   }
@@ -12,12 +17,20 @@
     width: 630px;
     gap: 30px;
 
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+
     .input-container {
       .image-inputs {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+
+        @media (max-width: $breakpoint-md) {
+          grid-template-columns: 1fr;
+        }
 
         .image-upload-container {
           width: 100%;
@@ -26,6 +39,10 @@
           border: 1px solid $gray-300;
           border-radius: 15px;
           cursor: pointer;
+
+          @media (max-width: $breakpoint-md) {
+            height: 200px;
+          }
 
           input {
             display: none;
@@ -79,6 +96,10 @@
     button {
       @include buttonLG($secondary-500, $white, 20px 40px);
       align-self: flex-start;
+    
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
     }
   }
 }

@@ -13,15 +13,15 @@
     }
 
     .top-workers-container {
-      width: 100%;
       padding: 10px;
+      width: 100%;
       display: flex;
-      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       -ms-overflow-style: none;
+
       &::-webkit-scrollbar {
         display: none;
       }

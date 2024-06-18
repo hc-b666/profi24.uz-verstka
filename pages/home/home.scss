@@ -1,4 +1,3 @@
-
 // --------------- Search Section --------------- //
 .search-section {
   width: 100%;
@@ -201,7 +200,7 @@
             font-weight: 500;
             line-height: 22px;
           }
-        }    
+        }
       }
 
       .create-card {
@@ -506,22 +505,21 @@
 }
 
 // --------------- Orders Section --------------- //
-.orders-section {
+.top-workers-section {
   width: 100%;
 
   .container {
     gap: 38px;
 
-    .orders-section-header {
-      h2 {
-        @include typoH2($typo-header-color);
-      }
-      & > button {
-        @include buttonDefault($primary-500, $white, 12px 24px, 100px);
+    & > h2 {
+      @include typoH2($black);
+
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
       }
     }
 
-    .orders-container {
+    .top-workers-container {
       padding: 10px;
       width: 100%;
       display: flex;
@@ -536,7 +534,7 @@
       }
     }
 
-    .orders-control {
+    .top-workers-controls {
       gap: 20px;
 
       & > button {
@@ -603,7 +601,7 @@
 
       .experts-content-image {
         gap: 20px;
-      
+
         @media (max-width: $breakpoint-xl) {
           align-self: center;
         }
