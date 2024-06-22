@@ -6,6 +6,9 @@ export const getId = (id) => document.getElementById(id);
 // Get an element by its class name
 export const getClass = (className) => document.querySelector(className);
 
+// Get elements by their class name
+export const getClassAll = (className) => document.querySelectorAll(className);
+
 // Add one or more classes to an element
 export const addClass = (element, ...classNames) => element.classList.add(...classNames);
 

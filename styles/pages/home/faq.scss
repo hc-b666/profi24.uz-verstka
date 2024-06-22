@@ -32,18 +32,56 @@
           padding: 16px 24px;
           border-radius: 50px;
           background-color: $gray-50;
-          gap: 20px;
           cursor: pointer;
+          overflow: hidden;
 
-          p {
-            @include typoPLead($typo-header-color);
+          .accordion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            p {
+              @include typoPLead($typo-header-color);
+            }
+
+            button {
+              width: 40px;
+              height: 40px;
+              border-radius: 40px;
+              background-color: $white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: transform 0.5s, background-color 0.5s;
+            }
           }
 
-          button {
-            width: 40px;
-            height: 40px;
-            border-radius: 40px;
-            background-color: $white;
+          .accordion-description {
+            height: 0;
+            transition: height 0.5s ease;
+            overflow: hidden;
+
+            p {
+              @include typoPLead($typo-header-color);
+            }
+          }
+
+          .accordion-description-active {
+            height: auto;
+            padding-top: 16px;
+          }
+        }
+
+        .accordion-active {
+          padding: 30px;
+          gap: 20px;
+
+          .accordion-header {
+            button {
+              background-color: $primary-500;
+              transform: rotate(180deg);
+            }
           }
         }
       }
