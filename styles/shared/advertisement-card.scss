@@ -9,6 +9,10 @@
     width: 210px;
     height: 210px;
     border-radius: 15px;
+
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
   }
 
   .advertisement-card-content {
@@ -21,9 +25,31 @@
 
       .advertisement-card-content-header-top {
         width: 100%;
+        gap: 20px;
 
-        h6 {
-          @include typoH6($typo-header-color);
+        @media (max-width: $breakpoint-lg) {
+          align-items: flex-start;
+        }
+
+        & > img {
+          width: 100px;
+          height: 100px;
+
+          @media (min-width: $breakpoint-lg) {
+            display: none;
+          }
+        }
+
+        .flex {
+          @media (max-width: $breakpoint-lg) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+          }
+
+          h6 {
+            @include typoH6($typo-header-color);
+          }
         }
       }
 
@@ -41,6 +67,9 @@
     }
 
     .advertisement-card-content-details {
+      flex-wrap: wrap;
+      gap: 20px;
+
       .advertisement-card-content-details-left {
         gap: 30px;
 

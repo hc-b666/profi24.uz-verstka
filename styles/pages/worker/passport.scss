@@ -5,7 +5,7 @@
 
   @media (max-width: $breakpoint-md) {
     padding: 30px;
-  } 
+  }
 
   form {
     max-width: 520px;
@@ -37,12 +37,16 @@
             border-color: $primary-500;
           }
         }
-      } 
+      }
     }
 
     & > button {
       @include buttonLG($secondary-500, $white, 20px 60px);
       align-self: flex-start;
+      
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
     }
   }
 }
