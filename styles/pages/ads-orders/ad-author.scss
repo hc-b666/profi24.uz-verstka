@@ -1,9 +1,8 @@
 .author-layout {
   padding-bottom: 48px;
   background-color: $gray-50;
-  
+
   .author-profile {
-    margin-bottom: 48px;
     width: 100%;
     height: 360px;
     position: relative;
@@ -38,43 +37,34 @@
       }
     }
 
-    .profile-image-wrap {
-      width: 140px;
-      height: 140px;
-      border: 10px solid $gray-50;
-      border-radius: 100%;
-      position: absolute;
-      top: 180px;
-      left: 5%;
+    .profile-content-wrap {
+      margin-top: 48px;
 
-      .profile-image {
-        width: 100%;
-        height: 100%;
-        position: relative;
-
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: 100%;
-        }
-      }
-    }
-
-    .profile-content {
-      width: 1fr;
-      position: absolute;
-      top: 270px;
-      left: 15%;
-
-      div {
+      .profile-content {
         gap: 20px;
 
-        h3 {
-          @include typoH3($typo-header-color);
+        .profile-content-image {
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+          border-radius: 8px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+          }
         }
 
-        p {
-          @include typoP($typo-muted-text);
+        .flex {
+          h3 {
+            @include typoH3($typo-header-color);
+          }
+
+          p {
+            @include typoP($typo-muted-text);
+          }
         }
       }
 
